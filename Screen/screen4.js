@@ -1,7 +1,7 @@
 import React from 'react';
-import { StyleSheet, Text, View, Image, TouchableOpacity } from 'react-native';
+import { StyleSheet, Text, View, Image } from 'react-native';
 
-export default function Screen4({ navigation }) {
+export default function Screen4() {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
@@ -31,15 +31,6 @@ export default function Screen4({ navigation }) {
         </View>
         <Text style={styles.orderAmount}>$25</Text>
       </View>
-
-      <View style={styles.cartButtonContainer}>
-        <TouchableOpacity
-          style={styles.cartButton}
-          onPress={() => navigation.navigate('Cart')}
-        >
-          <Text style={styles.cartButtonText}>PayNow</Text>
-        </TouchableOpacity>
-      </View>
     </View>
   );
 }
@@ -62,7 +53,7 @@ const styles = StyleSheet.create({
   headerText: {
     fontSize: 20,
     fontWeight: 'bold',
-    marginLeft: 90,
+    marginHorizontal: 90,
   },
   orderContainer: {
     flexDirection: 'row',
@@ -80,30 +71,12 @@ const styles = StyleSheet.create({
     fontSize: 18,
     fontWeight: 'bold',
     color: '#fff',
-    marginLeft: 10,
+    marginHorizontal: 10,
   },
   orderAmount: {
     fontSize: 18,
     color: '#fff',
-    marginRight: 10,
-    fontWeight: 'bold',
-  },
-  cartButtonContainer: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    marginTop: 10,
-  },
-  cartButton: {
-    backgroundColor: '#EFB034',
-    width: 300,
-    height: 50,
-    justifyContent: 'center',
-    alignItems: 'center',
-    borderRadius: 10,
-  },
-  cartButtonText: {
-    color: '#fff',
-    fontSize: 20,
+    marginHorizontal: 10,
     fontWeight: 'bold',
   },
 });
